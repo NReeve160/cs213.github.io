@@ -1,1 +1,177 @@
-// The file should say This will be assignment #3
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8" />
+<title>Nathan Reeve's Home Page</title>
+<style>
+    body {
+        text-align: center; 
+        background-color: green;
+        color: #DAA520;
+    }
+</style>
+</head>
+
+<header id="top">
+    <hr>
+    <a href="#bottom"><img src="naddpod.jpg" alt="naddpod logo" style="max-width: 100%;"</a>
+</header>
+<body>
+    <h1 style="font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;">
+        Welcome to <em>Nathan Reeve's</em> Camp Fire, Pull up a seat</h1>
+
+    <h2 style="font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 
+    'Lucida Sans', Arial, sans-serif;">
+        Nathan Reeve, <i>Software Engineering,</i> South Jordan Utah</h2>
+    <hr>
+    <strong><a href="../index.html">CS 213 Assignments</a></strong><br>
+
+    <table style="margin-left: auto; margin-right: auto;">
+        <tr>
+            <th>Course #</th>
+            <th>Course Description</th>
+            <th>Sec #</th>
+            <th>Class Time</th>
+            <th>Class Location</th>
+        </tr>
+        <tr>
+            <td style="text-align: center;">CIT 225</td>
+            <td style="text-align: center;">Database Design & Development</td>
+            <td style="text-align: center;">06</td>
+            <td style="text-align: center;">No Class Time</td>
+            <td style="text-align: center;">My parents basement</td>
+        </tr>
+        <tr>
+            <td style="text-align: center;">CS 213</td>
+            <td style="text-align: center;">Web Engineering 1</td>
+            <td style="text-align: center;">01</td>
+            <td style="text-align: center;">No Class Time</td>
+            <td style="text-align: center;">My parents basement</td>
+        </tr>
+        <tr>
+            <td style="text-align: center;">CS 235</td>
+            <td style="text-align: center;">Designing Data Structures</td>
+            <td style="text-align: center;">01</td>
+            <td style="text-align: center;">No Class Time</td>
+            <td style="text-align: center;">My parents basement</td>
+        </tr>
+        <tr>
+            <td style="text-align: center;">CS 416</td>
+            <td style="text-align: center;">Software Engineering 2</td>
+            <td style="text-align: center;">01</td>
+            <td style="text-align: center;">No Class Time</td>
+            <td style="text-align: center;">My parents basement</td>
+        </tr>
+        <tr>
+            <td style="text-align: center;">CSE 453</td>
+            <td style="text-align: center;">Computer Security</td>
+            <td style="text-align: center;">03</td>
+            <td style="text-align: center;">No Class Time</td>
+            <td style="text-align: center;">My parents basement</td>
+        </tr>
+    </table>
+
+    <div id="quote">
+    <a href="https://www.naddpod.com/"><h2 style="font-family: 'Brush Script MT', 'Brush Script Std', 'cursive';
+    color: rgb(170, 141, 11);">Not Another DND Podcast</h2></a>
+    <blockquote style="font-family: 'Brush Script MT', 'Brush Script Std', 'cursive';
+    color: rgb(170, 141, 11);">
+        If you are asking 'What's in it for us' then you don't know us at all. We just
+        do this for the pleasure of making things a little better and we don't mind 
+        getting a little dirty" <a href="https://notanotherdndpodcast.fandom.com/wiki/Beverly_Toegold_V">
+        -Beverly Toegold the Fifth</a></blockquote>
+    <a href="https://notanotherdndpodcast.fandom.com/wiki/Balnor" target="_blank">
+    <img src="balnor.jpg" alt="naddpods balnor" style="max-width: 15%; height: auto; border-radius: 50%; display: block;
+    margin-left:auto; margin-right:auto"></a>
+    </div>
+
+    <hr>
+    <div id="form">
+    <form>
+        Your Name:           <input type="text" style="background-color: #C7CBC4;"><br><br>
+        Your Favorite Story: <input type="textarea" style="background-color: #C7CBC4;"><br><br>
+        Favorite D&D Race:   <input list="Race" style="background-color: #C7CBC4;"><br><br>
+        Best Classes With Race: <br>
+        <input type="checkbox" id="fighter"> <label for="fighter">
+            Fighter
+        </label>
+        <input type="checkbox" id="barbarian"> <label for="barbarian">
+            Barbarian
+        </label>
+        <input type="checkbox" id="bard"> <label for="bard">
+            Bard
+        </label>
+        <input type="checkbox" id="cleric"> <label for="cleric">
+            Cleric
+        </label>
+        <input type="checkbox" id="druid"> <label for="druid">
+            Druid
+        </label>
+        <input type="checkbox" id="monk"> <label for="monk">
+            Monk
+        </label>
+        <input type="checkbox" id="paladin"> <label for="paladin">
+            Paladin
+        </label>
+        <input type="checkbox" id="ranger"> <label for="ranger">
+            Ranger
+        </label>
+        <input type="checkbox" id="rogue"> <label for="rogue">
+            Rogue
+        </label>
+        <input type="checkbox" id="sorcerer"> <label for="sorcerer">
+            Sorcerer
+        </label>
+        <input type="checkbox" id="warlock"> <label for="warlock">
+            Warlock
+        </label>
+        <input type="checkbox" id="wizard"> <label for="wizard">
+            Wizard
+        </label>
+        <input type="checkbox" id="artificer"> <label for="artificer">
+            Artificer
+        </label><br><br>
+
+        Level of Experience with D&D:<br>
+        <input type="radio" id="beginner">
+        <label for="beginner">Beginner</label>
+        <input type="radio" id="intermediate">
+        <label for="intermediate">Intermediate</label>
+        <input type="radio" id="expert">
+        <label for="expert">Expert</label><br><br>
+        
+        <label for="play">Want to play?</label><br>
+        <select name="play" id="play">
+            <option value="yes">Yes</option>
+            <option value="no">No</option>
+            <option value="maybe">Maybe</option>
+        </select>
+
+        <datalist id="Race">
+            <option value="Dragonborn"></option>
+            <option value="Dwarf"></option>
+            <option value="Elf"></option>
+            <option value="Gnome"></option>
+            <option value="Half-Elf"></option>
+            <option value="Halfling"></option>
+            <option value="Half-Orc"></option>
+            <option value="Human"></option>
+            <option value="Tiefling"></option>
+            <option value="Orc"></option>
+            <option value="Leonin"></option>
+            <option value="Satyr"></option>
+            <option value="Fairy"></option>
+            <option value="Harengon"></option>
+            <option value="Aarakocra"></option>
+            <option value="Genasi"></option>
+            <option value="Goliath"></option>
+            <option value="Aasimar"></option>
+        </datalist>
+    </form>
+    </div>
+    <hr>
+    <footer id="bottom">
+        <a href="#top"><p>A website made by Nathan Reeve</p></a>
+    </footer>
+</body>
+</html>
