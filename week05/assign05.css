@@ -1,0 +1,117 @@
+body {
+    background-color: black;
+    color: #ead864;
+}
+
+header {
+    display: inline-block;
+    position: relative;
+    width: 200px;
+    height: 200px;
+    overflow: hidden;
+    border-radius: 50%;
+    left: 50%;
+    transform: translateX(-50%);
+    border: 5px solid black;
+}
+  
+header img {
+    width: auto;
+    height: 100%;
+    margin-left: -70px;
+}
+
+footer {
+    text-align: center;
+}
+
+h1 {
+    text-align: center;
+}
+
+.group {
+    text-align: center;
+}
+
+.group img {
+    max-width: 100%;
+    height: auto;
+}
+
+.the_party {
+    text-align: center;
+    display: flex;
+    flex-direction: column;
+}
+
+.the_party img {
+    max-width: 100%;
+    height: auto;
+}
+
+@media (min-width: 800px) {
+    .the_party {
+        display: flex;
+        flex-direction: row;
+        flex-wrap: wrap;
+    }
+
+    .the_party img {
+        max-width: 75%;
+        height: auto;
+    }
+
+    #opal {
+        flex: 50%;
+    }
+
+    #dariax {
+        flex: 50%;
+    }
+
+    #dorian {
+        flex: 50%;
+    }
+
+    #fearne {
+        flex: 50%;
+    }
+
+    #orym {
+        flex: 100%;
+    }
+}
+
+@media (min-width: 1000px) {
+    .the_party {
+        display: flex;
+        flex-direction: row;
+        flex-wrap: wrap;
+        align-items: center;
+    }
+
+    .the_party img {
+        max-width: 50%;
+        height: auto;
+    }
+
+    #opal {
+        flex: 33%;
+    }
+
+    #dariax {
+        flex: 33%;
+    }
+
+    #dorian {
+        flex: 33%;
+    }
+
+    #fearne {
+        flex: 50%;
+    }
+
+    #orym {
+        flex: 50%;
+    }
+}
