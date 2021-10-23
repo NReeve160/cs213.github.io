@@ -1,0 +1,25 @@
+#flex_first {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin: auto;
+    margin-top: 1rem;
+}
+
+#flex_second {
+    display: flex;
+    list-style-type: none;
+    flex-direction: column;
+    align-self: center;
+}
+
+#flex_second_wrapper {
+
+}
+
+@media (min-width: 600px) {
+
+}
+
+@media (min-width: 1200px) {
+}
