@@ -7,6 +7,25 @@ body {
     color: #c4b9ba;
 }
 
+header {
+    display: flex;
+    flex-direction: row;
+    width: 100%;
+    height: auto;
+    justify-content: left;
+    padding-left: 5%;
+}
+
+header, #mascot {
+    max-width: 100%;
+    height: auto;
+
+}
+
+header, #celtic {
+    max-width: 30%;
+}
+
 img {
     max-width: 100%;
     padding: 2px, 2px, 2px, 2px;
@@ -39,11 +58,19 @@ a, a:visited, a:hover, a:active {
     border-style: none;
 }
 
+a, #mascot {
+    max-width: 100%;
+}
+
 @media (min-width: 800px) {
 
 }
 
 @media (min-width: 1000px) {
+    header {
+        padding-left: 34%;
+    }
+    
     .content {
         display: flex;
         flex-direction: row;
