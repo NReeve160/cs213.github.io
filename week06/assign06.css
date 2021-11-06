@@ -58,6 +58,15 @@ a, a:visited, a:hover, a:active {
     border-style: none;
 }
 
+.sidebar ul{
+    margin: 0 30 0 30px;
+    padding: 10px;
+}
+
+.classes {
+    border-style: none;
+}
+
 a, #mascot {
     max-width: 100%;
 }

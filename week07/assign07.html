@@ -1,1 +1,118 @@
-// The file should say This will be assignment #7
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+   <meta charset="UTF-8">
+   <title>JavaScript Calculator</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="JavaScript Calculator">
+   <link rel="stylesheet" href="assign07.css">
+</head>
+
+<body onLoad="hideErrors()">
+
+<form action="" onReset="resetForm()">
+   <h1>Mortgage Calculator</h1>
+
+   <div class="form_item">
+      <label for="apr">APR (0 - 25.00)</label>
+      <input id="apr" name="apr" type="text" onInput="validateForm(this.value, this.id)" placeholder="5.25" required>
+      <span id="aprError" class="error_msg">The APR must be between 0 and 25.</span>
+   </div>
+
+   <div class="form_item">
+      <label for="term">Term (1 - 40)</label>
+      <input id="term" name="term" type="text" onInput="validateForm(this.value, this.id)" placeholder="10" required>
+      <span id="termError" class="error_msg">The Term must be greater than 0 and less than or equal to 40.</span>
+   </div>
+
+   <div class="form_item">
+      <label for="amount">Dollar Amount</label>
+      <input id="amount" name="amount" type="text" onInput="validateForm(this.value, this.id)" placeholder="100000" required>
+      <span id="amountError" class="error_msg">The Amount must be greater than 0.</span>
+   </div>
+
+   <div class="form_item">
+      <label for="payment">Monthly Payment</label>
+      <input id="payment" type="text" readonly>
+   </div>
+
+   <div class="form_item">
+      <button id="clear" type="reset">Clear</button>
+      <button id="calculate" type="button" onClick="calculatePayment()">Calculate</button>
+   </div>
+</form>
+
+<!--
+the scripts could be put into an external js file
+<script src="assign07.js"></script>
+-->
+<script>
+function hideErrors(){
+   var errorSpans = document.getElementsByClassName("error_msg");
+
+   for(var i=0; i<errorSpans.length; i++) {
+      errorSpans[i].style["visibility"] = "hidden";
+   }
+}
+
+function validateForm(value, id) {
+   var validation = "success";
+   switch(id){
+      case "apr":
+         if (isNaN(value) || value < 0 || value > 25) {
+            validation = "error";
+         }
+         break;
+      case "term":
+         if (isNaN(value) || value < 1 || value > 40) {
+            validation = "error";
+         }
+         break;
+      case "amount":
+         if (isNaN(value) || value < 0) {
+            validation = "error";
+         }
+         break;
+      default:
+         validation = "error";
+   }
+
+   if (validation === "error") {
+      document.getElementById(id+"Error").style.visibility = "visible";
+      document.getElementById(id).focus();
+   } else {
+      document.getElementById(id+"Error").style.visibility = "hidden";
+   }
+
+   return validation;
+}
+
+function resetForm() {
+   hideErrors();
+   document.getElementById("apr").focus();
+   return true;
+}
+
+function calculatePayment() {
+   var apr = document.getElementById("apr").value;
+   var term = document.getElementById("term").value;
+   var amount = document.getElementById("amount").value;
+
+   var aprValidation = validateForm(apr, "apr");
+   var termValidation = validateForm(term, "term");
+   var amountValidation = validateForm(amount, "amount");
+
+   if(aprValidation === "success" && termValidation === "success" && amountValidation === "success"){
+      var payment = amount * (apr / 100 / 12) / (1 - (Math.pow(1/(1 + (apr / 100 / 12)), (term * 12))));
+      if(isNaN(payment)){
+         document.getElementById("payment").value = 0;
+      }else{
+         document.getElementById("payment").value = payment.toFixed(2);
+      }
+   }
+}
+</script>
+
+</body>
+</html>
