@@ -1,1 +1,85 @@
-// The file should say This will be assignment #8
+// The file should say This will be assignment #8<!DOCTYPE html>
+<html lang="en">
+<head>
+   <meta charset="UTF-8">
+   <title>Assign 08</title>
+
+</head>
+<body onLoad="init()">
+
+<form id="order_form" action="" onReset="resetForm();" onSubmit="validateForm();">
+   <h1>Order Form</h1>
+   
+   <div class="form_item">
+      <label for="first_name">First Name</label>
+      <input id="first_name" name="first_name" type="text" onInput="validateFirstName()" >
+      <span id="first_nameError" class="error_msg">Please enter your first name.</span>
+   </div>
+
+   <div class="form_item">
+      <label for="last_name">Last Name</label>
+      <input id="last_name" name="last_name" type="text" onInput="validateLastName()" >
+      <span id="last_nameError" class="error_msg">Please enter your last name.</span>
+   </div>
+
+   <div class="form_item">
+      <label for="address">Address</label>
+      <textarea id="address" name="address" rows="5" cols="50" onInput="validateAddress()" ></textarea>
+      <span id="addressError" class="error_msg">Please enter your address.</span>
+   </div>
+
+   <div class="form_item">
+      <label for="phone">Phone Number</label>
+      <input id="phone" name="phone" type="text" onInput="validatePhone()" placeholder="555-555-5555" >
+      <span id="phoneError" class="error_msg">Please enter your phone number in the format 555-555-5555.</span>
+   </div>
+
+   <div class="form_item">
+      <label for="item">Items to Buy</label>
+      <fieldset id="item">
+         <label> <input type="checkbox" class="item_checkbox" name="item_0" value="100" onChange="checkTotal()"> Bike ($100) </label>
+         <label> <input type="checkbox" class="item_checkbox" name="item_1" value="5" onChange="checkTotal()"> Ball ($5) </label>
+         <label> <input type="checkbox" class="item_checkbox" name="item_2" value="15" onChange="checkTotal()"> Boomerang ($15) </label>
+         <label> <input type="checkbox" class="item_checkbox" name="item_2" value="7" onChange="checkTotal()"> Frisbee ($7) </label>
+      </fieldset>
+   </div>
+
+   <div class="form_item">
+      <label for="total">Total</label>
+      <input id="total" name="total" type="text" readonly>
+      <span id="totalError" class="error_msg">Please select one or more items to purchase.</span>
+   </div>
+
+   <div class="form_item">
+      <label for="card">Credit Card Type</label>
+      <fieldset id="card">
+         <label> <input type="radio" name="card" value="visa" checked> Visa </label>
+         <label> <input type="radio" name="card" value="mastercard"> Mastercard </label>
+         <label> <input type="radio" name="card" value="american_express"> American Express </label>
+      </fieldset>
+   </div>
+
+   <div class="form_item">
+      <label for="credit_card">Credit Card Number</label>
+      <input id="credit_card" name="credit_card" type="text" onInput="validateCreditCard()" placeholder="5555 5555 5555 5555" >
+      <span id="credit_cardError" class="error_msg">Please enter your credit card number in the format 5555 5555 5555 5555.</span>
+   </div>
+   
+   <div class="form_item">
+      <label for="exp_date">Credit Card Expiration Date</label>
+      <input id="exp_date" name="exp_date" type="text" onInput="validateExpDate()" placeholder="01/2020" >
+      <span id="exp_dateError" class="error_msg">Please enter your credit card expiration date in the format (01/2020).</span>
+   </div>
+   
+   <div class="form_item">
+      <button id="clear" type="reset">Reset</button>
+      <button id="validate" type="submit">Submit</button>
+   </div>
+</form>
+
+<script>
+
+</script>
+
+</body>
+</html>
